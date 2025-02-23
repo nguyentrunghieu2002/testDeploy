@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Switzer:wght@500&display=swap");
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  /* max-width: 400px; */
+  width: 666px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card--light {
+  background-color: white;
+  color: black;
+}
+
+.card--dark {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.card__image {
+  width: 237px;
+  height: 257px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 25px;
+}
+
+.card__content {
+  padding: 15px;
+}
+
+.card__title {
+  font-family: "Switzer", sans-serif;
+  font-size: 1.2em;
+  font-weight: 500 bold;
+  margin-bottom: 15px;
+  width: 239.62px;
+  line-height: 30.19px;
+  height: 60px;
+  letter-spacing: -0.01em;
+  color: "#000000";
+}
+
+.card__description {
+  font-family: "Switzer", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.12px;
+  letter-spacing: -0.01em;
+  width: 330px;
+  margin-bottom: 34px;
+}
+
+.card__author,
+.card__date {
+  font-family: "Switzer", sans-serif;
+  font-size: 0.8em;
+  color: gray;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.landscape__image {
+  width: 237px;
+  height: 257px;
+  object-position: center;
+  object-fit: none;
+  border-radius: 25px;
+}
