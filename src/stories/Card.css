@@ -60,17 +60,27 @@
   color: gray;
 }
 
-.truncate {
-  display: -webkit-box;
-  /* -webkit-line-clamp: 2; Giới hạn 2 dòng */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 .landscape__image {
   width: 237px;
   height: 257px;
   object-position: center;
   object-fit: none;
   border-radius: 25px;
+}
+
+.truncate {
+  display: block; /* Hoặc inline-block */
+  max-height: 3.6em; /* Giới hạn chiều cao tương đương 2 dòng */
+  line-height: 1.8em; /* Chiều cao của mỗi dòng */
+  overflow: hidden; /* Ẩn nội dung vượt quá */
+  position: relative; /* Để định vị dấu ... */
+}
+
+.truncate::after {
+  content: "..."; /* Hiển thị dấu ... */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white; /* Màu nền để che phần nội dung bị cắt */
+  padding-left: 5px; /* Khoảng cách giữa dấu ... và nội dung */
 }
