@@ -62,7 +62,7 @@
 
 .truncate {
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+  /* -webkit-line-clamp: 2; Giới hạn 2 dòng */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
