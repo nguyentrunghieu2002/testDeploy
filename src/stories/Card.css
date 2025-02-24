@@ -1,5 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Switzer:wght@500&display=swap"); */
 
+@import url("https://fonts.cdnfonts.com/css/switzer");
+
 .card {
   border-radius: 10px;
   overflow: hidden;
@@ -31,7 +33,7 @@
 }
 
 .card__title {
-  /* font-family: "Switzer", sans-serif; */
+  font-family: "Switzer", sans-serif;
   font-size: 1.2em;
   font-weight: 500 bold;
   margin-bottom: 15px;
@@ -43,7 +45,7 @@
 }
 
 .card__description {
-  /* font-family: "Switzer", sans-serif; */
+  font-family: "Switzer", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 21.12px;
@@ -53,7 +55,7 @@
 }
 
 .card__author .card__date {
-  /* font-family: "Switzer", sans-serif; */
+  font-family: "Switzer", sans-serif;
   font-size: 0.8em;
   color: gray;
 }
@@ -65,7 +67,7 @@
   object-fit: none;
   border-radius: 25px;
 }
-
+/* 
 .truncate {
   display: block;
   max-height: 3.6em;
@@ -81,4 +83,11 @@
   right: 0;
   background: white;
   padding-left: 5px;
+} */
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
