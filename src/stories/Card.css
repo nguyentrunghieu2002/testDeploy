@@ -69,18 +69,18 @@
 }
 
 .truncate {
-  display: block; /* Hoặc inline-block */
-  max-height: 3.6em; /* Giới hạn chiều cao tương đương 2 dòng */
-  line-height: 1.8em; /* Chiều cao của mỗi dòng */
-  overflow: hidden; /* Ẩn nội dung vượt quá */
-  position: relative; /* Để định vị dấu ... */
+  display: block;
+  max-height: 3.6em;
+  line-height: 1.8em;
+  overflow: hidden;
+  position: relative;
 }
 
 .truncate::after {
-  content: "..."; /* Hiển thị dấu ... */
+  content: "...";
   position: absolute;
   bottom: 0;
   right: 0;
-  background: white; /* Màu nền để che phần nội dung bị cắt */
-  padding-left: 5px; /* Khoảng cách giữa dấu ... và nội dung */
+  background: white;
+  padding-left: 5px;
 }
