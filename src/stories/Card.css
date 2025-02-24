@@ -6,6 +6,7 @@
   border-radius: 10px;
   overflow: hidden;
   width: 666px;
+  height: 284px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -29,7 +30,14 @@
 }
 
 .card__content {
-  padding: 15px;
+  width: 330px;
+  height: 208px;
+}
+
+.card__container {
+  height: 257px;
+  width: 607px;
+  margin: 13px 44px 14px 15px;
 }
 
 .card__title {
@@ -87,7 +95,7 @@
 
 .truncate {
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
