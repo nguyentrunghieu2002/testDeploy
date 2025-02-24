@@ -1,3 +1,5 @@
+import "./Card.css";
+
 export interface CardProps {
   /** Title of the card */
   title: string;
