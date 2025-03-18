@@ -1,0 +1,18 @@
+.active {
+  background-color: #e7efdf !important;
+  font-weight: bold !important;
+}
+
+.css-vhv7r1 {
+  background-color: white;
+  color: #7da752 !important;
+  border-radius: 25px !important;
+  height: 40px;
+  width: 111.66px;
+}
+
+.tab-header {
+  border-radius: 25px;
+  height: 40px;
+  width: 111.66px;
+}

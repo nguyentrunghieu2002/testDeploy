@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.Form {
+  background-color: red;
+  padding: 16px;
+  border-radius: 16px;
+  height: 343.35px;
+  width: fit-content;
+}
+
+.label-login {
+  font-weight: bold;
+  color: rgb(255, 143, 64);
+  font-size: 18.75px !important;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 16px !important;
+}
+
+.input {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  margin-top: 8px !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px !important;
+}
+
+input:focus {
+  outline: none;
+}
+
+.Policy {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 8px;
+}
+
+.Signup-button {
+  box-sizing: border-box;
+  margin: 0px;
+  color: rgb(255, 255, 255);
+  appearance: none;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  border: 0px;
+  text-align: center;
+  line-height: inherit;
+  text-decoration: none;
+  background: linear-gradient(
+    257.91deg,
+    rgb(255, 97, 27) 45.73%,
+    rgb(255, 143, 64) 95.79%
+  );
+  border-radius: 24px !important;
+  width: 100%;
+  max-width: 290px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}

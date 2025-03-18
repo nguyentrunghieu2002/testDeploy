@@ -1,76 +1,52 @@
 import "./Card.css";
+import { Box, Card as CardRB, Image, Heading, Text } from "rebass";
 
 export interface CardProps {
-  /** Title of the card */
-  title: string;
-  /** Description or content */
+  header: string;
   description: string;
-  /** Author name */
-  author: string;
-  /** Date of publication */
-  date: string;
-  /** Image source URL */
   imageSrc: string;
-  /** Theme mode: light or dark */
   darkMode?: boolean;
-
-  truncateDescription?: boolean;
-
-  Islandscape?: boolean;
-
-  onClick: () => void;
-
+  onClick?: () => void;
   cursor?: string;
+  truncateHeader?: boolean;
 }
 
-export const Card = ({ onClick, cursor, ...props }: CardProps) => {
+export const Card = (props: CardProps) => {
+  const { onClick, cursor, darkMode, imageSrc, header, description } = props;
+
   return (
-    <div
-      className={`card ${props.darkMode ? "card--dark" : "card--light"}`}
-      style={{
-        borderRadius: "24px",
-        cursor: cursor || "default",
-      }}
-      onClick={onClick}
-    >
-      <div
-        className={"card__container"}
-        style={{
-          display: "flex",
-          gap: "40px",
-          borderRadius: "24px",
-        }}
-      >
-        <img
-          src={props.imageSrc}
-          alt={props.title}
-          className={!props.Islandscape ? "card__image" : "landscape__image"}
-        />
-        <div className={"card__content"}>
-          <h2 className="card__title">
-            {props.title.length > 40
-              ? props.title.slice(0, 35) + "..."
-              : props.title}
-          </h2>
-          <p
-            className={`card__description ${
-              props.truncateDescription ? "truncate" : ""
-            }`}
-          >
-            {props.description && (
-              <p style={{ color: "#7B7A81" }} className="card__description">
-                {props.description}
-              </p>
-            )}
-          </p>
-          <div style={{ color: "#424246" }} className="card__author">
-            {props.author}
+    <>
+      <Box onClick={onClick}>
+        <CardRB
+          className={`card-container ${
+            darkMode ? "card--dark" : "card--light"
+          }`}
+          style={{
+            borderRadius: "16px",
+            boxShadow: "0 0 16px rgba(0, 0, 0, .25)",
+            display: "flex",
+            margin: "10px 0px",
+            cursor: cursor || "default",
+          }}
+        >
+          <Image className="card-img" src={imageSrc} />
+          <div className="card-main">
+            <div>
+              <Heading
+                style={{ margin: "13.28px 0px", fontSize: "16px" }}
+                as="h2"
+                className="truncate-header card-title"
+              >
+                {header}
+              </Heading>
+              <span className="card-des">{description}</span>
+            </div>
+            <a href="" className="card-link">
+              5 Discussions &nbsp;{" "}
+            </a>
           </div>
-          <div style={{ color: "#7B7A81" }} className="card__date">
-            {props.date}
-          </div>
-        </div>
-      </div>
-    </div>
+        </CardRB>
+      </Box>
+    </>
   );
 };
