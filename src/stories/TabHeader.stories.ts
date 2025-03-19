@@ -1,14 +1,14 @@
 // Replace your-framework with the name of your framework
 import type { Meta, StoryObj } from "@storybook/react";
 
-import TabHeader from "./TabHeader";
+import Header from "./Header";
 
-const meta: Meta<typeof TabHeader> = {
-  component: TabHeader,
+const meta: Meta<typeof Header> = {
+  component: Header,
 };
 
 export default meta;
-type Story = StoryObj<typeof TabHeader>;
+type Story = StoryObj<typeof Header>;
 
 export const Default: Story = {
   args: {},
