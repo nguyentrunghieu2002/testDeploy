@@ -1,10 +1,9 @@
 import { useState } from "react";
-import Tab from "./Tab";
 import TabHeader from "./TabHeader";
 import { Card } from "./Card";
+import "./TabPage.css";
 
 const TabPage = () => {
-  const [activeTab, setActiveTab] = useState("tab1");
   const data = [
     {
       id: 1,
@@ -62,6 +61,24 @@ const TabPage = () => {
     },
   ];
 
+  const headerData = [
+    {
+      id: 1,
+      headerName: "Prevention",
+      tabKey: "tab1",
+    },
+    {
+      id: 2,
+      headerName: "Symptoms",
+      tabKey: "tab2",
+    },
+    {
+      id: 3,
+      headerName: "Diagnosis",
+      tabKey: "tab3",
+    },
+  ];
+
   const [header, setHeader] = useState<string>("tab1");
 
   const newHeaderState = (state: string) => {
@@ -94,7 +111,23 @@ const TabPage = () => {
 
   return (
     <div>
-      <TabHeader newHeaderState={newHeaderState} />
+      <div
+        style={{
+          display: "flex",
+        }}
+        className="header-tab-container"
+      >
+        {headerData.map((item) => (
+          <TabHeader
+            tabKey={item.tabKey}
+            key={item.id}
+            headerName={item.headerName}
+            activeTab={header}
+            newHeaderState={() => newHeaderState(item.tabKey)}
+          />
+        ))}
+      </div>
+
       {filteredData.map((item: any) => (
         <Card
           key={item.id}
