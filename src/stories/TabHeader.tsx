@@ -1,12 +1,14 @@
 import { Button } from "rebass";
 import "./TabHeader.css";
+import { useState } from "react";
 
 interface TabHeaderProps {
-  activeTab: string;
-  setActiveTab: any;
+  newHeaderState: (tab: string) => void;
 }
 
-const TabHeader = ({ activeTab, setActiveTab }: TabHeaderProps) => {
+const TabHeader = ({ newHeaderState = () => {} }: TabHeaderProps) => {
+  const [active, setActive] = useState<string>("tab1");
+  console.log(typeof newHeaderState);
   return (
     <div
       style={{
@@ -18,20 +20,29 @@ const TabHeader = ({ activeTab, setActiveTab }: TabHeaderProps) => {
     >
       <div style={{ padding: "5px" }}>
         <Button
-          className={activeTab === "tab1" ? "active" : "css-vhv7r1"}
-          onClick={() => setActiveTab("tab1")}
+          className={active === "tab1" ? "active" : "css-vhv7r1"}
+          onClick={() => {
+            newHeaderState("tab1");
+            setActive("tab1");
+          }}
         >
           Prevention
         </Button>
         <Button
-          className={activeTab === "tab2" ? "active" : "css-vhv7r1"}
-          onClick={() => setActiveTab("tab2")}
+          className={active === "tab2" ? "active" : "css-vhv7r1"}
+          onClick={() => {
+            newHeaderState("tab2");
+            setActive("tab2");
+          }}
         >
           Symptoms
         </Button>
         <Button
-          className={activeTab === "tab3" ? "active" : "css-vhv7r1"}
-          onClick={() => setActiveTab("tab3")}
+          className={active === "tab3" ? "active" : "css-vhv7r1"}
+          onClick={() => {
+            newHeaderState("tab3");
+            setActive("tab3");
+          }}
         >
           Diagnosis
         </Button>

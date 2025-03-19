@@ -2,9 +2,9 @@ import "./Card.css";
 import { Box, Card as CardRB, Image, Heading, Text } from "rebass";
 
 export interface CardProps {
-  header: string;
-  description: string;
-  imageSrc: string;
+  header?: string;
+  description?: string;
+  imageSrc?: string;
   darkMode?: boolean;
   onClick?: () => void;
   cursor?: string;
